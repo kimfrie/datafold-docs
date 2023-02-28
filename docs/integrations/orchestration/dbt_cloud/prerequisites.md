@@ -36,10 +36,9 @@ We recommend creating a job in dbt Cloud that sends production artifacts (the `m
 
 <div style="background-color: #e6f4ff; border: 1px solid #91caff; border-radius: 8px; padding: 8px 12px;">
     <h5>info Continuous Deployment</h5>
-    <p>
-        
-        [creating a Merge Trigger Production Job](../../../guides/ci_guides/dbt_cloud.md#merge-trigger-production-job) using a tool like GitHub Actions.
-    </p>
+
+[creating a Merge Trigger Production Job](../../../guides/ci_guides/dbt_cloud.md#merge-trigger-production-job) using a tool like GitHub Actions.
+
 </div>
 
 ### Artifacts Job
