@@ -34,7 +34,7 @@ dbt Cloud CI requires you to create at least two dbt Cloud jobs: a Production jo
 
 We recommend creating a job in dbt Cloud that sends production artifacts (the `manifest.json` file) to Datafold on a regular basis. This is the easiest way to get started with Datafold.
 
-<div style={{backgroundColor: '#e6f4ff', border: '1px solid #91caff', borderRadius: '8px', padding: '8px 12px'}}">
+<div style={{backgroundColor: '#e6f4ff', border: '1px solid #91caff', borderRadius: '8px', padding: '8px 12px'}}>
     <h5>info Continuous Deployment</h5>
 
 [creating a Merge Trigger Production Job](https://docs.datafold.com/guides/ci_guides/dbt_cloud#merge-trigger-production-job) using a tool like GitHub Actions.
