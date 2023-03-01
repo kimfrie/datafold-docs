@@ -11,7 +11,7 @@ title: datafold-sdk
 Datafold allows you to trigger data diffs from CI using the [datafold-sdk](https://pypi.org/project/datafold-sdk/). This allows you to easily integrate Datafold in your CI with arbitrary pipeline orchestrators (e.g. Airflow, Dagster, Prefect).
 
 ## Prerequisites
-** The key prerequisite is that Datafold has access to two datasets to compare. ** If your PR CI deploys changes to a staging location and materializes a staging version of the involved tables, Datafold can be added as a final step to diff dev and production.
+**The key prerequisite is that Datafold has access to two datasets to compare.** If your PR CI deploys changes to a staging location and materializes a staging version of the involved tables, Datafold can be added as a final step to diff dev and production.
 
 With a custom data pipeline, Datafold just needs to know what objects to compare and the primary key column, for example:
 - staging_database.sales.orders
@@ -24,7 +24,7 @@ With a custom data pipeline, Datafold just needs to know what objects to compare
 
 ## Config
 
-- ** Admin > Settings > Orchestration > + Add new integration **
+- **Admin > Settings > Orchestration > + Add new integration**
 
 ![](/img/sdk_new_integration.png)
 
