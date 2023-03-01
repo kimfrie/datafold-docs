@@ -73,6 +73,7 @@ Successfully started a diff under Run ID 401
 
 <div style={{backgroundColor: '#fdfdfe', borderLeft: '5px solid #d4d5d8', borderRadius: '4px', boxShadow: '0 1px 2px 0 #0000001a', padding: '1rem'}}>
     <h5>ⓘ &nbsp; NOTE</h5>
+ 
 The "prod", "pr", and "pk" key values will need to be variables if the goal is running dynamic tables for each PR. For example, it might make sense to create a list of ** [changed files](https://github.com/marketplace/actions/changed-files) ** in a previous step, and complete multiple diffs using a file naming convention.
 </div>
 
@@ -100,5 +101,6 @@ print(f"Successfully started a diff under Run ID {run_id}")
 
 <div style={{backgroundColor: '#fdfdfe', borderLeft: '5px solid #d4d5d8', borderRadius: '4px', boxShadow: '0 1px 2px 0 #0000001a', padding: '1rem'}}>
     <h5>ⓘ &nbsp; NOTE</h5>
-    The prod, pr, and pk parameters should be set by variables if the goal is running dynamic tables for each PR. For example, it might make sense to create a list of ** [changed files](https://github.com/marketplace/actions/changed-files) ** in a previous step, and complete multiple diffs using a file naming convention.
+   
+The prod, pr, and pk parameters should be set by variables if the goal is running dynamic tables for each PR. For example, it might make sense to create a list of ** [changed files](https://github.com/marketplace/actions/changed-files) ** in a previous step, and complete multiple diffs using a file naming convention.
 </div>
