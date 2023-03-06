@@ -4,9 +4,6 @@ title: Prerequisites
 description: Description of datafold-sdk
 ---
 # datafold-sdk
-```
-In order to connect Datafold to your dbt Core project and submit dbt artifacts please follow the instruction and add datafold-sdk package to your dbt project code
-```
 ### Prerequisites
 - To use the Datafold sdk, you must first connect a [Data Source](integrations/data_warehouses/dw_overview.md) and connect a [GitHub](/integrations/git/github.md) or [GitLab](/integrations/git/gitlab.md) account.
 
