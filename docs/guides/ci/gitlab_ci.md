@@ -1,10 +1,3 @@
----
-sidebar_position: 3
-id: gitlab_ci
-title: GitLab CI
-pagination_prev: guides/ci
-pagination_next: guides/cd
----
 ## Basic Config
 
 This job runs in two scenarios, determined in the `rules:` section:
