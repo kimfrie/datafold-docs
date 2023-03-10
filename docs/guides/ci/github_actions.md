@@ -285,11 +285,10 @@ jobs:
 
 ### Use source_state method to skip stale sources
 
-:::caution
+<div style={{backgroundColor: '#fffbe6', border: '1px solid #ffe58f', borderRadius: '8px', padding: '8px 12px'}}>
 
 [From dbt Labs](https://docs.getdbt.com/reference/node-selection/methods#the-source_status-method): the `source_status` selection method is experimental and subject to change.
-
-:::
+</div>
 
 If a data source in your dbt project has not received new data since the previous dbt run, rerunning downstream models is an unnessary expense. The `source_status` method allows you to skip models downstream of stale sources.
 
