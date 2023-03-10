@@ -1,10 +1,3 @@
----
-sidebar_position: 2
-id: github_actions
-title: GitHub Actions
-pagination_prev: guides/ci
-pagination_next: guides/cd
----
 ## Basic Config
 
 ### Production Job
@@ -13,7 +6,7 @@ This job runs in two scenarios, defined in the `on:` section:
 ##### Deploy Production
 * **When?**
     * New commits are pushed to the main branch
-* **Why?** 
+* **Why?**
     * Deploy model changes into the data warehouse
 
 ##### Scheduled
@@ -130,7 +123,7 @@ jobs:
         env:
           # Secrets are pulled from the Github Actions secrets setting
           # See: https://docs.github.com/en/actions/security-guides/encrypted-secrets
-          # The findPR variable from the previous step is used to create a schema for the current PR 
+          # The findPR variable from the previous step is used to create a schema for the current PR
           SNOWFLAKE_ACCOUNT: ${{ secrets.SNOWFLAKE_ACCOUNT }}
           SNOWFLAKE_USER: ${{ secrets.SNOWFLAKE_USER }}
           SNOWFLAKE_PASSWORD: ${{ secrets.SNOWFLAKE_PASSWORD }}
@@ -150,7 +143,7 @@ jobs:
 ## Advanced Config
 
 ### Advanced Pull Request Job
-This is similar to the [pull request job](github_actions.md#pull-request-job) above, with some added features:
+This is similar to the [pull request job](https://docs.datafold.com/guides/ci_guides/dbt_core/github_actions#pull-request-job) above, with some added features:
 * [Slim CI](https://docs.getdbt.com/docs/dbt-cloud/using-dbt-cloud/cloud-enabling-continuous-integration#configuring-a-dbt-cloud-ci-job)
     * Speeds up CI by running only your changes
     * Quick primer on [state:modified](https://docs.getdbt.com/reference/node-selection/methods#the-state-method) syntax:
@@ -158,7 +151,7 @@ This is similar to the [pull request job](github_actions.md#pull-request-job) ab
         * `state:+modified` run the modified model(s) and all upstream models
         * `state:modified+n` run the modified model(s) and N downstream models
 * Concurrency
-    * [Cancel in-progress workflows](#use-concurrency-to-cancel-in-progress-workflows) for new commits pushed
+    * [Cancel in-progress workflows](https://docs.datafold.com/guides/ci_guides/dbt_core/github_actions#use-concurrency-to-cancel-in-progress-workflows) for new commits pushed
 
 ```yml
 name: dbt staging
@@ -298,7 +291,7 @@ jobs:
 
 :::
 
-If a data source in your dbt project has not received new data since the previous dbt run, rerunning downstream models is an unnessary expense. The `source_status` method allows you to skip models downstream of stale sources. 
+If a data source in your dbt project has not received new data since the previous dbt run, rerunning downstream models is an unnessary expense. The `source_status` method allows you to skip models downstream of stale sources.
 
 This method compares artifacts from the previous run to the current run, using the `max_loaded_at` field to dermine which sources have new data. Importantly, the `sources.json` artifact from the previous freshness test will need to be stored, and a freshness test will need to be invoked for the current run.
 
