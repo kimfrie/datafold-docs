@@ -46,7 +46,7 @@ Here's an example command for your copy/pasting, taken from the screenshot above
 data-diff \
   postgresql://<username>:'<password>'@localhost:5432/<database> \
   <table> \
-  "snowflake://<username>:<password>@<password>/<DATABASE>/<SCHEMA>?warehouse=<WAREHOUSE>&role=<ROLE>" \
+  "snowflake://<username>:<password>@<ACCOUNT>/<DATABASE>/<SCHEMA>?warehouse=<WAREHOUSE>&role=<ROLE>" \
   <TABLE> \
   -k activity_id \
   -c activity \
@@ -67,7 +67,7 @@ Here's a code example corresponding to the (within-database demo video)[https://
 
 ```shell
 data-diff \
-  "snowflake://<username>:<password>@<password>/<DATABASE>/<SCHEMA_1>?warehouse=<WAREHOUSE>&role=<ROLE>" <TABLE_1> \
+  "snowflake://<username>:<password>@<ACCOUNT>/<DATABASE>/<SCHEMA_1>?warehouse=<WAREHOUSE>&role=<ROLE>" <TABLE_1> \
   <SCHEMA_2>.<TABLE_2> \
   -k org_id \
   -c created_at -c is_internal \
