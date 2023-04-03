@@ -165,7 +165,7 @@ Set up Datafold's [open-source data-diff](/os_diff/dbt_integration#open-source-d
 
 To configure a Data Source, navigate to **Settings** &rarr; **Integrations** &rarr; **Data warehouses** and click **Add new integration** and follow the prompts. For more information, check out our [Data Source configuration guides](/integrations/data_warehouses/dw_overview).
 
-After you **Test and Save**, add the Data Source ID (which can be found on the Data warehouses page) to your **dbt_project_yml**.
+After you **Test and Save**, add the Data Source ID (which can be found on the Data warehouses page) to your **dbt_project.yml**.
     
   ```yaml
   # dbt_project.yml
@@ -184,6 +184,14 @@ Copy and export your API Key as an environment variable. We suggest storing it i
   ```bash
   export DATAFOLD_API_KEY=XXXXXXXXX
   ``` 
+
+:::info
+On-prem customers should set an environment variable specifying the URL you use to access Datafold.
+
+  ```bash
+  export DATAFOLD_HOST=https://datafold.domain.tld
+  ``` 
+:::
 
 ### Run with --cloud
 
