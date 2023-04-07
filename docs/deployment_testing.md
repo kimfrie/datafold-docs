@@ -12,7 +12,7 @@ When deploying models, it's hard to understand the impact a code changes will ha
 
 ## Getting Started
 
-1. Connect your Data Source
-2. Integrate with Source Control
-3. Integrate with dbt Core/Cloud
-4. [Optional] Connect Data Apps
+1. Connect your [Data Source](/deployment_testing/data_sources)
+2. Integrate with [Source Control](/deployment_testing/source_control)
+3. Integrate with [dbt Core/Cloud](/deployment_testing/dbt)
+4. [Optional] Connect [Data Apps](/deployment_testing/data_apps)
