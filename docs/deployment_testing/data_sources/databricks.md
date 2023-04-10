@@ -8,7 +8,7 @@ pagination_next: deployment_testing/source_control
 **Steps to complete:**
 
 1. [Generate a Personal Access Token](databricks.md#generate-a-personal-access-token)
-2. [Retrieve SQL endpoint settings](databricks.md#retrieve-sql-endpoint-settings)
+2. [Retrieve SQL warehouse settings](databricks.md#retrieve-sql-warehouse-settings)
 3. [Configure your data source in Datafold](databricks.md#configure-in-datafold)
 
 ### Generate a Personal Access Token
@@ -19,14 +19,14 @@ Visit **Settings** → **User Settings**, and then switch to **Personal Access T
 
 Then, click **Generate new token**. Save the generated token somewhere, you'll need it later on.
 
-### Retrieve SQL endpoint settings
+### Retrieve SQL warehouse settings
 
-In **SQL** mode, navigate to **SQL Endpoints**.
+In **SQL** mode, navigate to **SQL Warehouses**.
 
-![](/img/databricks_sql_endpoint.png)
+![](/img/databricks_sql_warehouse.png)
 
 
-Choose the preferred endpoint and copy the following fields values from its **Connection Details** tab:
+Choose the preferred warehouse and copy the following fields values from its **Connection Details** tab:
 
 * Server hostname
 * HTTP path
