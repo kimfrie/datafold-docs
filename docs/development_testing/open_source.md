@@ -76,7 +76,7 @@ Navigate to your dbt project, and install data-diff and a database connector.
 
 ### Configure your dbt Project
 
-Add the following variables to **dbt_project.yml** and tag the primary keys for each model in **schema.yml**. 
+Add the following variables to **dbt_project.yml**:
 
   ```yaml
   #dbt_project.yml
@@ -86,16 +86,7 @@ Add the following variables to **dbt_project.yml** and tag the primary keys for 
       prod_schema: <PROD_SCHEMA_NAME> # optional - single schema deployments
   ``` 
   
-  ```yaml
-  #schema.yaml
-  models:
-    - name: <MODEL_NAME>
-      columns:
-        - name: <COLUMN_NAME>
-          tags:
-            - primary-key
-  ```
-  To learn more about setting primary key tags, check out [this section](/guides/dbt_advanced_configs#tag-primary-keys).
+Then, identify primary keys in each model by adding tags, metadata, or uniqueness tests. [Check out this page](/guides/dbt_advanced_configs#tag-primary-keys) for more details on configuration.
 
 ### Run with --dbt
 
