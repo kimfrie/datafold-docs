@@ -88,26 +88,15 @@ Add the following variables to **dbt_project.yml**:
   ```
 <details>
   <summary>Additional schema variable details</summary>
-  The values for <code>prod_schema</code> and <code>prod_custom_schema</code> will vary based on how you have setup dbt.<br/><br/>
+  The value for <code>prod_custom_schema:</code> will vary based on how you have setup dbt.<br/><br/>
 
-  <b>prod_schema</b><br/>
-  This variable should be set to the default schema for the production target. It is used when a model does not have a custom schema.
+  This variable is used when a model has a custom schema and becomes <b><i>dynamic</i></b> when the string literal <code>&lt;custom_schema&gt;</code> is present. The <code>&lt;custom_schema&gt;</code> substring is replaced with the custom schema for the model in order to support the various ways schema name generation can be overridden <a href="https://docs.getdbt.com/docs/build/custom-schemas">here</a> -- also referred to as "advanced custom schemas".
+  <h3>Examples (not exhaustive)</h3>
   <br/>
-  <br/>
-  <b>prod_custom_schema</b><br/>
-  This variable is used when a model has a custom schema. The &lt;custom_schema&gt; section is replaced with the custom schema for the model in order to support the various ways schema name generation can be overridden <a href="https://docs.getdbt.com/docs/build/custom-schemas">here</a>.
-  <br/>
-  <br/>
-  If the production schemas look like <code>prod_marketing, prod_sales</code> for example, the variable should be set like so:
-  <br/><code>prod_custom_schema: prod_&lt;custom_schema&gt;</code>
-  <br/>
-  <br/>
-  If the production schemas look like <code>marketing, sales</code> for example, the variable would instead be:
-  <br/><code>prod_custom_schema: &lt;custom_schema&gt;</code>
-  <br/>
-  <br/>
-  <b>Examples</b><br/>
-  <b>Single production schema:</b><br/>
+  <b>Single production schema</b><br/>
+  <i>If your prod environment looks like this ...</i><br/>
+  <code>PROD.ANALYTICS</code><br/>
+  <i>... your data-diff configuration should look like this:</i><br/>
   <code>
   vars:<br/>
     &nbsp;&nbsp;data_diff:<br/>
