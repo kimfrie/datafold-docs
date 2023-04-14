@@ -82,8 +82,8 @@ Add the following variables to **dbt_project.yml**:
   #dbt_project.yml
   vars:
     data_diff:
-      prod_database: PROD_DATABASE_NAME
-      prod_schema: PROD_DEFAULT_SCHEMA_NAME # Optional: see dropdown below
+      prod_database: my_database
+      prod_schema: my_default_schema # default schema for the prod target
       prod_custom_schema: PROD_<custom_schema> # Optional: see dropdown below
   ```
 <details>
@@ -111,35 +111,37 @@ Add the following variables to **dbt_project.yml**:
   <code>
   vars:<br/>
     &nbsp;&nbsp;data_diff:<br/>
-      &nbsp;&nbsp;&nbsp;&nbsp;prod_database: my_database<br/>
-      &nbsp;&nbsp;&nbsp;&nbsp;prod_schema: prod<br/>
+      &nbsp;&nbsp;&nbsp;&nbsp;prod_database: PROD<br/>
+      &nbsp;&nbsp;&nbsp;&nbsp;prod_schema: ANALYTICS<br/>
   </code>
   <br/>
   <br/>
-  <b>Prod schema names always match dev:</b><br/>
+  <b>Some custom schemas in production with a prefix like “prod_”</b><br/>
+  <i>If your prod environment looks like this ...</i><br/>
+  <code>PROD.ANALYTICS</code><br/>
+  <code>PROD.PROD_MARKETING</code><br/>
+  <code>PROD.PROD_SALES</code><br/>
+  <i>... your data-diff configuration should look like this:</i><br/>
   <code>
   vars:<br/>
     &nbsp;&nbsp;data_diff:<br/>
-      &nbsp;&nbsp;&nbsp;&nbsp;prod_database: my_database<br/>
+      &nbsp;&nbsp;&nbsp;&nbsp;prod_database: PROD<br/>
+      &nbsp;&nbsp;&nbsp;&nbsp;prod_schema: ANALYTICS<br/>
+      &nbsp;&nbsp;&nbsp;&nbsp;prod_custom_schema: PROD_&lt;custom_schema&gt;<br/>
   </code>
   <br/>
   <br/>
-  <b>Some schemas are prefixed with "prod_", some use "prod" by default:</b><br/>
+  <b>Some custom schemas in production with no prefix</b><br/>
+  <i>If your prod environment looks like this ...</i><br/>
+  <code>PROD.ANALYTICS</code><br/>
+  <code>PROD.MARKETING</code><br/>
+  <code>PROD.SALES</code><br/>
+  <i>... your data-diff configuration should look like this:</i><br/>
   <code>
   vars:<br/>
     &nbsp;&nbsp;data_diff:<br/>
-      &nbsp;&nbsp;&nbsp;&nbsp;prod_database: my_database<br/>
-      &nbsp;&nbsp;&nbsp;&nbsp;prod_schema: prod<br/>
-      &nbsp;&nbsp;&nbsp;&nbsp;prod_custom_schema: prod_&lt;custom_schema&gt;<br/>
-  </code>
-  <br/>
-  <br/>
-  <b>Production schemas are never prefixed, but can land in the "analytics" schema by default</b><br/>
-  <code>
-  vars:<br/>
-    &nbsp;&nbsp;data_diff:<br/>
-      &nbsp;&nbsp;&nbsp;&nbsp;prod_database: my_database<br/>
-      &nbsp;&nbsp;&nbsp;&nbsp;prod_schema: analytics<br/>
+      &nbsp;&nbsp;&nbsp;&nbsp;prod_database: PROD<br/>
+      &nbsp;&nbsp;&nbsp;&nbsp;prod_schema: ANALYTICS<br/>
       &nbsp;&nbsp;&nbsp;&nbsp;prod_custom_schema: &lt;custom_schema&gt;<br/>
   </code>
 </details>
