@@ -88,13 +88,13 @@ Add the following variables to **dbt_project.yml**:
   ```
 <details>
   <summary>Additional schema variable details</summary>
-  The values for <code>prod_schema:</code> and <code>prod_custom_schema:</code> will vary based on how you have setup dbt.<br/><br/>
+  The values for <code>prod_schema</code> and <code>prod_custom_schema</code> will vary based on how you have setup dbt.<br/><br/>
 
-  <b>prod_schema:</b><br/>
+  <b>prod_schema</b><br/>
   This variable should be set to the default schema for the production target. It is used when a model does not have a custom schema.
   <br/>
   <br/>
-  <b>prod_custom_schema:</b><br/>
+  <b>prod_custom_schema</b><br/>
   This variable is used when a model has a custom schema. The &lt;custom_schema&gt; section is replaced with the custom schema for the model in order to support the various ways schema name generation can be overridden <a href="https://docs.getdbt.com/docs/build/custom-schemas">here</a>.
   <br/>
   <br/>
