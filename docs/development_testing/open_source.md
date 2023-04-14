@@ -82,10 +82,68 @@ Add the following variables to **dbt_project.yml**:
   #dbt_project.yml
   vars:
     data_diff:
-      prod_database: <PROD_DATABASE_NAME>
-      prod_schema: <PROD_SCHEMA_NAME> # optional - single schema deployments
-  ``` 
-  
+      prod_database: PROD_DATABASE_NAME
+      prod_schema: PROD_DEFAULT_SCHEMA_NAME # Optional: see dropdown below
+      prod_custom_schema: PROD_<custom_schema> # Optional: see dropdown below
+  ```
+<details>
+  <summary>Additional schema variable details</summary>
+  The values for <code>prod_schema:</code> and <code>prod_custom_schema:</code> will vary based on how you have setup dbt.<br/><br/>
+
+  <b>prod_schema:</b><br/>
+  This variable should be set to the default schema for the production target. It is used when a model does not have a custom schema.
+  <br/>
+  <br/>
+  <b>prod_custom_schema:</b><br/>
+  This variable is used when a model has a custom schema. The &lt;custom_schema&gt; section is replaced with the custom schema for the model in order to support the various ways schema name generation can be overridden <a href="https://docs.getdbt.com/docs/build/custom-schemas">here</a>.
+  <br/>
+  <br/>
+  If the production schemas look like <code>prod_marketing, prod_sales</code> for example, the variable should be set like so:
+  <br/><code>prod_custom_schema: prod_&lt;custom_schema&gt;</code>
+  <br/>
+  <br/>
+  If the production schemas look like <code>marketing, sales</code> for example, the variable would instead be:
+  <br/><code>prod_custom_schema: &lt;custom_schema&gt;</code>
+  <br/>
+  <br/>
+  <b>Examples</b><br/>
+  <b>Single production schema:</b><br/>
+  <code>
+  vars:<br/>
+    &nbsp;&nbsp;data_diff:<br/>
+      &nbsp;&nbsp;&nbsp;&nbsp;prod_database: my_database<br/>
+      &nbsp;&nbsp;&nbsp;&nbsp;prod_schema: prod<br/>
+  </code>
+  <br/>
+  <br/>
+  <b>Prod schema names always match dev:</b><br/>
+  <code>
+  vars:<br/>
+    &nbsp;&nbsp;data_diff:<br/>
+      &nbsp;&nbsp;&nbsp;&nbsp;prod_database: my_database<br/>
+  </code>
+  <br/>
+  <br/>
+  <b>Some schemas are prefixed with "prod_", some use "prod" by default:</b><br/>
+  <code>
+  vars:<br/>
+    &nbsp;&nbsp;data_diff:<br/>
+      &nbsp;&nbsp;&nbsp;&nbsp;prod_database: my_database<br/>
+      &nbsp;&nbsp;&nbsp;&nbsp;prod_schema: prod<br/>
+      &nbsp;&nbsp;&nbsp;&nbsp;prod_custom_schema: prod_&lt;custom_schema&gt;<br/>
+  </code>
+  <br/>
+  <br/>
+  <b>Production schemas are never prefixed, but can land in the "analytics" schema by default</b><br/>
+  <code>
+  vars:<br/>
+    &nbsp;&nbsp;data_diff:<br/>
+      &nbsp;&nbsp;&nbsp;&nbsp;prod_database: my_database<br/>
+      &nbsp;&nbsp;&nbsp;&nbsp;prod_schema: analytics<br/>
+      &nbsp;&nbsp;&nbsp;&nbsp;prod_custom_schema: &lt;custom_schema&gt;<br/>
+  </code>
+</details>
+
 Then, identify primary keys in each model by adding tags, metadata, or uniqueness tests. [Check out this page](/guides/dbt_advanced_configs#tag-primary-keys) for more details on configuration.
 
 ### Run with --dbt
