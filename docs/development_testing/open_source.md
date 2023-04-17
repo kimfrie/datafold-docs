@@ -75,6 +75,11 @@ Navigate to your dbt project, and install data-diff and a database connector.
 </Tabs>
 
 ### Configure your dbt Project
+:::info
+These docs reflect the latest version of data-diff listed [here](https://github.com/datafold/data-diff/releases)!
+
+Run `pip install data-diff -U` to update!
+:::
 
 Add the following variables to **dbt_project.yml**:
 
