@@ -27,6 +27,7 @@ const config = {
     locales: ['en'],
   },
 
+  themes: ['docusaurus-theme-search-typesense'],
   presets: [
     [
       'classic',
@@ -138,6 +139,26 @@ const config = {
       prism: {
         theme: lightCodeTheme,
         darkTheme: darkCodeTheme,
+      },
+      typesense: {
+        typesenseCollectionName: 'datafold-docs', // Replace with your own doc site's name. Should match the collection name in the scraper settings.
+        
+        typesenseServerConfig: {
+          nodes: [
+            {
+              host: 'localhost',
+              port: 8108,
+              protocol: 'http',
+            },
+          ],
+          apiKey: '8GHDxvCJANRWXZ7XQ7sZ',
+        },
+  
+        // Optional: Typesense search parameters: https://typesense.org/docs/0.21.0/api/search.md#search-parameters
+        typesenseSearchParameters: {},
+  
+        // Optional
+        contextualSearch: false,
       },
     }),
 };
