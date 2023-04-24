@@ -25,7 +25,7 @@ Navigate to your dbt project, and install data-diff and a database connector.
   <TabItem value="snowflake">
 
   ```zsh
-  pip install data-diff 'data-diff[snowflake]' -U
+  pip install data-diff 'data-diff[snowflake,dbt]' -U
   ```
 
   </TabItem>
@@ -47,28 +47,28 @@ Navigate to your dbt project, and install data-diff and a database connector.
   <TabItem value="redshift">
 
   ```zsh
-  pip install data-diff 'data-diff[redshift]' -U
+  pip install data-diff 'data-diff[redshift,dbt]' -U
   ```
 
   </TabItem>
   <TabItem value="postgres">
 
   ```zsh
-  pip install data-diff 'data-diff[postgres]' -U
+  pip install data-diff 'data-diff[postgres,dbt]' -U
   ```
 
   </TabItem>
   <TabItem value="databricks">
 
   ```zsh
-  pip install data-diff 'data-diff[databricks]' -U
+  pip install data-diff 'data-diff[databricks,dbt]' -U
   ```
 
   </TabItem>
   <TabItem value="duckdb">
 
   ```zsh
-  pip install data-diff 'data-diff[duckdb]' -U
+  pip install data-diff 'data-diff[duckdb,dbt]' -U
   ```
 
   </TabItem>
