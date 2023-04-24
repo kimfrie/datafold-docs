@@ -43,11 +43,10 @@ run_pipeline:
     - if: $CI_COMMIT_REF_NAME == $CI_DEFAULT_BRANCH
       variables:
         TYPE: "production"
-        SNOWFLAKE_SCHEMA: "<my-production-schema>"
     - if: '$CI_PIPELINE_SOURCE == "merge_request_event"'
       variables:
         TYPE: "pull_request"
-        SNOWFLAKE_SCHEMA: "<my-merge-request-schema>"
+        # You can set more environment variables that will be accessible by your dbt project
 ```
 
 ## Advanced Config
@@ -95,9 +94,8 @@ run_pipeline:
     - if: $CI_COMMIT_REF_NAME == $CI_DEFAULT_BRANCH
       variables:
         TYPE: "production"
-        SNOWFLAKE_SCHEMA: "<my-production-schema>"
     - if: '$CI_PIPELINE_SOURCE == "merge_request_event"'
       variables:
         TYPE: "pull_request"
-        SNOWFLAKE_SCHEMA: "<my-merge-request-schema>"
+        # You can set more environment variables that will be accessible by your dbt project
 ```
