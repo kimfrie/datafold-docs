@@ -32,7 +32,7 @@ Navigate to your dbt project, and install data-diff and a database connector.
   <TabItem value="bigquery">
 
   ```zsh
-  pip install data-diff google-cloud-bigquery -U
+pip install data-diff 'data-diff[dbt]' google-cloud-bigquery -U
   ```
   <details>
     <summary>Additional BigQuery details</summary>
