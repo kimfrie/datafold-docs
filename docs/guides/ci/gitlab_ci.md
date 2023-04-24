@@ -101,6 +101,7 @@ run_pipeline:
         SNOWFLAKE_DATABASE: "<my-production-database>" # Include this line if building prod data in a dedicated database.
     - if: '$CI_PIPELINE_SOURCE == "merge_request_event"'
       variables:
+        TYPE: "pull_request"
         SNOWFLAKE_SCHEMA: "<my-merge-request-schema>" # Include this line if building MR data in a dedicated schema.
         SNOWFLAKE_DATABASE: "<my-merge-request-database>" # Include this line if building MR data in a dedicated database.
 ```
