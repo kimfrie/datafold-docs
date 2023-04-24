@@ -38,16 +38,15 @@ run_pipeline:
     - dbt build --full-refresh --profiles-dir ./
 
     # Use the Datafold sdk to create a diff and write results to the PR
-    - datafold dbt upload --ci-config-id 999 --run-type $TYPE --commit-sha $CI_COMMIT_SHA
+    - datafold dbt upload --ci-config-id <ci-config-id> --run-type $TYPE --commit-sha $CI_COMMIT_SHA
   rules:
     - if: $CI_COMMIT_REF_NAME == $CI_DEFAULT_BRANCH
       variables:
         TYPE: "production"
-        SNOWFLAKE_SCHEMA: "BEERS"
     - if: '$CI_PIPELINE_SOURCE == "merge_request_event"'
       variables:
         TYPE: "pull_request"
-        SNOWFLAKE_SCHEMA: "BEERS_DEV" 
+        # You can set more environment variables that will be accessible by your dbt project
 ```
 
 ## Advanced Config
@@ -60,7 +59,7 @@ This is similar to the [merge request job](gitlab_ci#basic-config) above, with s
         * `state:modified+` run the modified model(s) and all downstream models
         * `state:+modified` run the modified model(s) and all upstream models
         * `state:modified+n` run the modified model(s) and N downstream models
-* Datafold CI Diff - Link Here? Diff Core?
+* Datafold CI Diff
     * Create diffs automatically and write the details to the merge request
 
 ```yml
@@ -87,7 +86,7 @@ run_pipeline:
     - dbt build --select state:modified+ --defer --state ./ --exclude config.materialized:snapshot --profiles-dir ./
 
     # Use the Datafold sdk to create a diff and write results to the PR
-    - datafold dbt upload --ci-config-id 999 --run-type $TYPE --commit-sha $CI_COMMIT_SHA
+    - datafold dbt upload --ci-config-id <ci-config-id> --run-type $TYPE --commit-sha $CI_COMMIT_SHA
 
     # Optional source freshness tests
     - dbt source freshness --profiles-dir ./
@@ -95,9 +94,8 @@ run_pipeline:
     - if: $CI_COMMIT_REF_NAME == $CI_DEFAULT_BRANCH
       variables:
         TYPE: "production"
-        SNOWFLAKE_SCHEMA: "BEERS"
     - if: '$CI_PIPELINE_SOURCE == "merge_request_event"'
       variables:
         TYPE: "pull_request"
-        SNOWFLAKE_SCHEMA: "BEERS_DEV" 
+        # You can set more environment variables that will be accessible by your dbt project
 ```
