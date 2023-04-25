@@ -5,6 +5,10 @@ description: ""
 pagination_prev: deployment_testing/source_control
 pagination_next: deployment_testing/data_apps
 ---
+
+:::info Prerequisites
+* Using dbt Core requires use of the Datafold SDK. Continue with setup by [generating a Datafold API key](/reference/cloud#create-an-api-key).
+:::
 ## Configuration
 Complete the configuration by specifying the following fields:
 
@@ -23,9 +27,6 @@ Complete the configuration by specifying the following fields:
 | Sampling confidence | The confidence to apply when sampling. |
 | Sampling Threshold | Sampling will be disabled automatically if tables are smaller than specified threshold. If unspecified, default values will be used depending on the Data Source type. |
 
-:::info
-Using dbt Core requires use of the Datafold SDK. Continue with setup by [generating a Datafold API key](/reference/cloud#create-an-api-key).
-:::
 
 ## Next Steps
 - Save
