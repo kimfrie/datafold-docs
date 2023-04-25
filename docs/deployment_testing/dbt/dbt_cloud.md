@@ -42,7 +42,7 @@ We recommend creating a new dbt Cloud job that generates production artifacts on
 
  <details>
     <summary>Continuous Deployment</summary>
-    Alternatively, you can set up continuous deployment by <a href="../dbt/dbt_cloud">creating a Merge Trigger Production Job</a> using a tool like GitHub Actions
+    Alternatively, you can set up continuous deployment by <a href="/guides/cd#merge-trigger-production-job">creating a Merge Trigger Production Job</a> using a tool like GitHub Actions
   </details>
 
 ## Configuration
