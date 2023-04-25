@@ -6,7 +6,7 @@ pagination_prev: deployment_testing/source_control
 pagination_next: deployment_testing/data_apps
 ---
 :::info
-You will need a dbt **Team** account or higher to access the dbt Cloud API that Datfold uses to connect the accounts.
+You will need a dbt **Team** account or higher to access the dbt Cloud API that Datafold uses to connect the accounts.
 :::
 
 <!-- ### Connect your accounts using a token
