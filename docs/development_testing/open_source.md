@@ -155,4 +155,7 @@ Run your dbt model with `data-diff --dbt` to see the impact that your model chan
   dbt run --select <MODEL>
   data-diff --dbt
   ```
-  
+
+### Optional model configuration
+
+- Increase large table + diff performance by adding a [filter](/guides/dbt_advanced_configs#filter-tables)
