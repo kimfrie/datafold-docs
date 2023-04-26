@@ -6,7 +6,7 @@ pagination_prev: deployment_testing/source_control
 pagination_next: deployment_testing/data_apps
 ---
 :::info
-You will need a dbt **Team** account or higher to access the dbt Cloud API that Datfold uses to connect the accounts.
+You will need a dbt **Team** account or higher to access the dbt Cloud API that Datafold uses to connect the accounts.
 :::
 
 <!-- ### Connect your accounts using a token
@@ -31,19 +31,18 @@ You will need a dbt **Team** account or higher to access the dbt Cloud API that 
 ### dbt Cloud API Key
 You will need either a [Service Token](https://docs.getdbt.com/docs/dbt-cloud-apis/service-tokens) or a [User Token](https://docs.getdbt.com/docs/dbt-cloud-apis/user-tokens) to connect Datafold to your dbt Cloud account.
 
-### Pull/Merge Request Job
-In dbt Cloud, [set up dbt Cloud CI](https://docs.getdbt.com/docs/deploy/cloud-ci-job) so that your Pull/Merge Request job runs when you open or update a Pull/Merge Request.
+### dbt Cloud Jobs
+Integrating Datafold with dbt Cloud requires at least two dbt Cloud CI jobs:
+1. #### Pull/Merge Request Job
+Create a Pull/Merge Request job by following the [dbt docs](https://docs.getdbt.com/docs/deploy/cloud-ci-job#configure-ci-for-a-job). This job should runs whenever you open or update a Pull/Merge Request, giving Datafold information about the changes included in the PR.
 
-dbt Cloud CI requires you to create at least two dbt Cloud jobs: a Production job and a Pull/Merge Request job. To integrate with Datafold, you may need to create additional jobs, which are described below.
+2. #### Artifacts Job
+The Artifacts job generates production artifacts on a scheduled basis, giving Datafold information about the state of production. The simplest method is to set up a job that executes the `dbt compile` command on an hourly basis. 
 
-### Artifacts Job
-
-We recommend creating a new dbt Cloud job that generates production artifacts on a scheduled basis. The simpliest method is to set up a job that executes the `dbt compile` command on an hourly basis. 
-
- <details>
+<details>
     <summary>Continuous Deployment</summary>
-    Alternatively, you can set up continuous deployment by <a href="../dbt/dbt_cloud">creating a Merge Trigger Production Job</a> using a tool like GitHub Actions
-  </details>
+    If you are interested in continuous deployment, you can use a <a href="/guides/cd#merge-trigger-production-job">Merge Trigger Production Job</a> instead of the Artifacts Job listed above.
+</details>
 
 ## Configuration
 
