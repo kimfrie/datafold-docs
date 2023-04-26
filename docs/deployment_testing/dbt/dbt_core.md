@@ -23,9 +23,8 @@ Complete the configuration by specifying the following fields:
 | Sampling confidence | The confidence to apply when sampling. |
 | Sampling Threshold | Sampling will be disabled automatically if tables are smaller than specified threshold. If unspecified, default values will be used depending on the Data Source type. |
 
-:::info
+## Generate API Key
 Using dbt Core requires use of the Datafold SDK. Continue with setup by [generating a Datafold API key](/reference/cloud#create-an-api-key).
-:::
 
 ## Next Steps
 - Save
