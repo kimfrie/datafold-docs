@@ -37,7 +37,7 @@ Integrating Datafold with dbt Cloud requires at least two dbt Cloud CI jobs:
 Create a Pull/Merge Request job by following the [dbt docs](https://docs.getdbt.com/docs/deploy/cloud-ci-job#configure-ci-for-a-job). This job should runs whenever you open or update a Pull/Merge Request, giving Datafold information about the changes included in the PR.
 
 2. #### Artifacts Job
-The Artifacts job generates production artifacts on a scheduled basis, giving Datafold information about the state of production. The simpliest method is to set up a job that executes the `dbt compile` command on an hourly basis. 
+The Artifacts job generates production artifacts on a scheduled basis, giving Datafold information about the state of production. The simplest method is to set up a job that executes the `dbt compile` command on an hourly basis. 
 
 <details>
     <summary>Continuous Deployment</summary>
