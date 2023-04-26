@@ -8,17 +8,13 @@ import TabItem from '@theme/TabItem';
 
 Want to see even more? **Datafold Cloud** gives you insight into value-level changes.
 
-:::note
+:::info
 Set up Datafold's [open-source data-diff](/development_testing/open_source) before configuring the cloud integration below.
 :::
 
 ### Create an Account
 
-:::info
-Datafold Cloud is currently in private beta. [Let us know](mailto:support@datafold.com?subject=Interested%20in%20Cloud%20Beta) if you are interested in participating.
-:::
-
-<!-- Create a [Datafold account](https://app.datafold.com/org-signup). -->
+If you don't already have a Datafold account, you can create one [here](https://app.datafold.com/org-signup).
 
 ### Configure a Data Source
 
