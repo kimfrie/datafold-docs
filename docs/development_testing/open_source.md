@@ -6,7 +6,7 @@ title: Open Source
 import Tabs from '@theme/Tabs';
 import TabItem from '@theme/TabItem';
 
-Use Datafold Open Source during development see a summary of how code changes impact your data.
+Use Datafold Open Source during development to see a summary of how code changes impact your data.
 
 ### Install data-diff
 
