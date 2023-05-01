@@ -109,8 +109,21 @@ models:
           exclude_columns:
             - full_name
 ```
-### Leverage Time Travel
-If your database supports time travel, you can diff tables from a particular point in time by specifying `prod_time_travel` for a production model and  `pr_time_travel` for a PR model.               
+### Timeline
+You can specify a `time_column` to visualize the match rate between tables for each column over time.
+
+```yaml
+models:
+  - name: users
+    meta:
+      datafold:
+        datadiff:
+          time_column:
+            - created_at
+```
+
+### Time Travel
+If your database supports time travel, you can diff tables from a particular point in time by specifying `prod_time_travel` for a production model and `pr_time_travel` for a PR model.               
 
 ```yaml
 models:
@@ -122,8 +135,6 @@ models:
             - 2022-02-07T00:00:00
           pr_time_travel:
             - 2022-02-07T00:00:00
-          time_column:
-            - created_at
 ```
 ### Never Diff a Model
 You can exclude a model or a subdirectory of models using `never_diff`.
@@ -148,7 +159,7 @@ When configured, Datafold can automatically ingest dbt metadata from your produc
 
 ### Model-level
 
-The following model-level information can be sync'd:
+The following model-level information can be synced:
 * `description` is synchronized into the description field of the table into Lineage.
 * The `owner` of the table is set to the user identified by the `user@company.com` field. This user must exist in Datafold with that email.
 * The `foo` meta information is added to the description field with the value `bar`.
