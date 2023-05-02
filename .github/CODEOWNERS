@@ -1,7 +1,7 @@
 # https://help.github.com/articles/about-codeowners/
 
 # Core Maintainers
-* @williebsweet @dlawin @kylemcnair @leoebfolsom
+* @dlawin @kylemcnair @leoebfolsom
 
 # OS-Diff
-/docs/os_diff/ @erezsh @williebsweet @dlawin @kylemcnair @leoebfolsom
+/docs/os_diff/ @dlawin @kylemcnair @leoebfolsom
