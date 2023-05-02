@@ -8,6 +8,8 @@ import TabItem from '@theme/TabItem';
 
 Use Datafold Open Source during dbt development to see a summary of how code changes impact your data.
 
+![](../../static/img/development_testing_gif.gif)
+
 ### Install data-diff
 
 Navigate to your dbt project, and install data-diff and a database connector.
