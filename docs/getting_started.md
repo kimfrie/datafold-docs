@@ -16,7 +16,7 @@ Whether you're an individual looking to get started with **Development Testing**
           See the impact code changes have on the data as you develop. <a href="development_testing">Learn more &rarr;</a>
           </td>
           <td width="50%">
-          <img src={'/img/open_source_output.png'} />
+          <img src={'/img/development_testing_gif.gif'} />
           </td>
       </tr>
     </table>
