@@ -14,7 +14,7 @@ import TabItem from '@theme/TabItem';
           Develop dbt models faster by testing as you code. <br /><a href="development_testing/open_source">Learn more &rarr;</a>
           </td>
           <td width="50%">
-          <img src={'/img/open_source_output.png'} />
+          <img src={'/img/development_testing_gif.gif'} />
           </td>
       </tr>
     </table>
