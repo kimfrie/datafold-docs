@@ -139,7 +139,7 @@ const config = {
               from: '/features/data_diff',
             },
             {
-              to: '/development_testing',
+              to: '/development_testing/open_source',
               from: '/quickstart_guide',
             },
             {
