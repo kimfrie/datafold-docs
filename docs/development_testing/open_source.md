@@ -1,12 +1,27 @@
 ---
 sidebar_position: 1
 id: open_source
-title: Open Source
+title: data-diff
+sidebar_label: Open Source
+hide_table_of_contents: true
 ---
 import Tabs from '@theme/Tabs';
 import TabItem from '@theme/TabItem';
 
-Use Datafold Open Source during dbt development to see a summary of how code changes impact your data.
+
+## Develop dbt models faster by testing as you code.
+
+### See how every change to dbt code affects the data produced in the modified model and downstream.
+
+:::tip Datafold in CI
+🔧 Interested in adding Datafold to your CI pipeline? [Let's talk!](https://calendly.com/d/zkz-63b-23q/see-a-demo?email=clay%20analytics%40datafold.com&first_name=Clay&last_name=Moeller&a1=) ☎️
+:::
+
+
+
+## What is data-diff?
+
+data-diff is an open source package that you can use to see the impact of your dbt code changes on your dbt models as you code.
 
 ![](../../static/img/development_testing_gif.gif)
 
