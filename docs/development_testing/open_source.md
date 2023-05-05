@@ -12,70 +12,21 @@ Use Datafold Open Source during dbt development to see a summary of how code cha
 
 ### Install data-diff
 
-Navigate to your dbt project, and install data-diff and a database connector.
+Navigate to your dbt project, and install data-diff.
 
-<Tabs
-  defaultValue="snowflake"
-  values={[
-    {label: 'Snowflake', value: 'snowflake'},
-    {label: 'BigQuery', value: 'bigquery'},
-    {label: 'Redshift', value: 'redshift'},
-    {label: 'PostgreSQL', value: 'postgres'},
-    {label: 'Databricks', value: 'databricks'},
-    {label: 'DuckDB', value: 'duckdb'},
-  ]}>
-  <TabItem value="snowflake">
+```bash
+pip install data-diff
+```
 
-  ```zsh
-  pip install data-diff 'data-diff[snowflake,dbt]' -U
-  ```
-
-  </TabItem>
-  <TabItem value="bigquery">
-
-  ```zsh
-pip install data-diff 'data-diff[dbt]' google-cloud-bigquery -U
-  ```
-  <details>
-    <summary>Additional BigQuery details</summary>
-    Only dbt projects that use the <a href="https://docs.getdbt.com/reference/warehouse-setups/bigquery-setup#oauth-via-gcloud">OAuth via gcloud</a> connection method are currently supported.
-    <br/> <br/>
-    For example, run: <br/> <code>gcloud auth application-default login</code> <br/>
-    <br/>
-    Before running: <br/> <code>dbt run --select &lt;MODEL&gt; && data-diff --dbt</code> <br/>
-  </details>
-
-  </TabItem>
-  <TabItem value="redshift">
-
-  ```zsh
-  pip install data-diff 'data-diff[redshift,dbt]' -U
-  ```
-
-  </TabItem>
-  <TabItem value="postgres">
-
-  ```zsh
-  pip install data-diff 'data-diff[postgres,dbt]' -U
-  ```
-
-  </TabItem>
-  <TabItem value="databricks">
-
-  ```zsh
-  pip install data-diff 'data-diff[databricks,dbt]' -U
-  ```
-
-  </TabItem>
-  <TabItem value="duckdb">
-
-  ```zsh
-  pip install data-diff 'data-diff[duckdb,dbt]' -U
-  ```
-
-  </TabItem>
-</Tabs>
-
+<details>
+  <summary>Additional BigQuery details</summary>
+  Only dbt projects that use the <a href="https://docs.getdbt.com/reference/warehouse-setups/bigquery-setup#oauth-via-gcloud">OAuth via gcloud</a> connection method are currently supported.
+  <br/> <br/>
+  For example, run: <br/> <code>gcloud auth application-default login</code> <br/>
+  <br/>
+  Before running: <br/> <code>dbt run --select &lt;MODEL&gt; && data-diff --dbt</code> <br/>
+</details>
+  
 ### Configure your dbt Project
 :::info
 These docs reflect the latest version of data-diff listed [here](https://github.com/datafold/data-diff/releases)!
