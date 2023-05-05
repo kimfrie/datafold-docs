@@ -1,22 +1,30 @@
 ---
 sidebar_position: 2
 id: cloud
-title: Cloud
+title: Datafold Cloud
+sidebar_label: Cloud
+hide_table_of_contents: true
 ---
 import Tabs from '@theme/Tabs';
 import TabItem from '@theme/TabItem';
 
-Want to see even more? **Datafold Cloud** gives you insight into value-level changes.
+## See value-level impact as you develop in dbt.
 
-:::info
-Set up Datafold's [open-source data-diff](/development_testing/open_source) before configuring the cloud integration below.
+### Create a free Datafold Cloud account to view and save value-level impact reports generated while developing in your dbt local environment.
+
+:::tip Datafold in CI
+🔧 Interested in adding Datafold to your CI pipeline? [Let's talk!](https://calendly.com/d/zkz-63b-23q/see-a-demo?email=clay%20analytics%40datafold.com&first_name=Clay&last_name=Moeller&a1=) ☎️
 :::
 
-### Create an Account
+### Set up your dbt project
+
+Install Datafold's open source data-diff tool and update a few lines in your **dbt_project.yml** by [following these installation instructions](/development_testing/open_source).
+
+### Create a Datafold account
 
 If you don't already have a Datafold account, you can create one [here](https://app.datafold.com/org-signup).
 
-### Configure a Data Source
+### Configure a data source
 
 To configure a Data Source, navigate to **Settings** &rarr; **Integrations** &rarr; **Data warehouses** and click **Add new integration** and follow the prompts. For more information, check out our [Data Source configuration guides](/deployment_testing/data_sources).
 
@@ -30,7 +38,7 @@ After you **Test and Save**, add the Data Source ID (which can be found on the D
         datasource_id: <DATA_SOURCE_ID>
   ```
 
-### Generate an API Key
+### Generate an API key
 
 To generate a personal API key, navigate to **Settings** &rarr; **Account** and click **Create API Key**. 
 
@@ -48,9 +56,9 @@ On-prem customers should set an environment variable specifying the URL you use 
   ``` 
 :::
 
-### Run with --cloud
+### Run `data-diff --dbt --cloud`
 
-Run your dbt model with `--cloud` to see the impact that your model change had on the data.
+Build 1 or more dbt models, and then run `data-diff --dbt --cloud` to see the impact that your model changes had on the data.
     
   ```zsh
   dbt run --select <MODEL> && data-diff --dbt --cloud
