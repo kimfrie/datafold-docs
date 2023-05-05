@@ -14,7 +14,7 @@ Use Datafold Open Source during dbt development to see a summary of how code cha
 
 Navigate to your dbt project, and install data-diff.
 
-```bash
+```zsh
 pip install data-diff
 ```
 
