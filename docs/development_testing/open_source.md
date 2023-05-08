@@ -1,7 +1,7 @@
 ---
 sidebar_position: 1
 id: open_source
-title: data-diff
+title: 'Develpment Testing: Open Source'
 sidebar_label: Open Source
 hide_table_of_contents: true
 ---
@@ -13,8 +13,8 @@ import TabItem from '@theme/TabItem';
 
 ### See how every change to dbt code affects the data produced in the modified model and downstream.
 
-:::tip Datafold in CI
-🔧 Interested in adding Datafold to your CI pipeline? [Let's talk!](https://calendly.com/d/zkz-63b-23q/see-a-demo?email=clay%20analytics%40datafold.com&first_name=Clay&last_name=Moeller&a1=) ☎️
+:::tip Team Cloud
+🔧 Interested in adding Datafold Team Cloud to your CI pipeline? [Let's talk!](https://calendly.com/d/zkz-63b-23q/see-a-demo?email=clay%20analytics%40datafold.com&first_name=Clay&last_name=Moeller&a1=) ☎️
 :::
 
 
