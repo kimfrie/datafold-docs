@@ -1,7 +1,7 @@
 ---
 sidebar_position: 1
 id: open_source
-title: 'Develpment Testing: Open Source'
+title: 'Development Testing: Open Source'
 sidebar_label: Open Source
 hide_table_of_contents: true
 ---
