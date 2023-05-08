@@ -1,8 +1,8 @@
 ---
 sidebar_position: 2
 id: cloud
-title: Datafold Cloud
-sidebar_label: Cloud
+title: 'Development Testing: Community Cloud'
+sidebar_label: Community Cloud
 hide_table_of_contents: true
 ---
 import Tabs from '@theme/Tabs';
@@ -12,8 +12,8 @@ import TabItem from '@theme/TabItem';
 
 ### Create a free Datafold Cloud account to view and save value-level impact reports generated while developing in your dbt local environment.
 
-:::tip Datafold in CI
-🔧 Interested in adding Datafold to your CI pipeline? [Let's talk!](https://calendly.com/d/zkz-63b-23q/see-a-demo?email=clay%20analytics%40datafold.com&first_name=Clay&last_name=Moeller&a1=) ☎️
+:::tip Team Cloud
+🔧 Interested in adding Datafold Team Cloud to your CI pipeline? [Let's talk!](https://calendly.com/d/zkz-63b-23q/see-a-demo?email=clay%20analytics%40datafold.com&first_name=Clay&last_name=Moeller&a1=) ☎️
 :::
 
 ### Set up your dbt project
