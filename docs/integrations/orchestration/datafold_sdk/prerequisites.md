@@ -5,7 +5,7 @@ description: Description of datafold-sdk
 ---
 # datafold-sdk
 ### Prerequisites
-- To use the Datafold sdk, you must first connect a [Data Source](integrations/data_warehouses/dw_overview.md) and connect a [GitHub](/integrations/git/github.md) or [GitLab](/integrations/git/gitlab.md) account.
+- To use the Datafold sdk, you must first connect a [Data Source](https://docs.datafold.com/deployment_testing/data_sources) and connect a [GitHub](https://docs.datafold.com/guides/ci/github_actions) or [GitLab](https://docs.datafold.com/guides/ci/gitlab_ci) account.
 
 ### Installation
 First, create your virtual environment for python:
