@@ -91,7 +91,7 @@ pip install data-diff 'data-diff[dbt]' google-cloud-bigquery -U
   </TabItem>
 </Tabs>
 
-### Configure your dbt Project
+### Configure your dbt project
 :::info
 These docs reflect the latest version of data-diff listed [here](https://github.com/datafold/data-diff/releases)!
 
@@ -173,6 +173,18 @@ Run your dbt model with `data-diff --dbt` to see the impact that your model chan
   data-diff --dbt
   ```
 
-### Optional model configuration
+### Optional configurations and flags
 
-- Increase large table + diff performance by adding a [filter](/guides/dbt_advanced_configs#filter-tables)
+#### Running `data-diff` on specific dbt models
+
+Out of the box, `data-diff --dbt` will diff all models that were built in your last `dbt run`.
+
+Beginning with `data-diff` version 1.5, you can add a `--select` flag to override the default behavior and specify which models you want to diff.
+
+```
+data-diff --dbt --select <models>
+```
+
+#### Handling very large dbt models
+
+`data-diff` will reach performance limitations on large dbt models. One strategy to reduce run time in this scenario is to add a [filter](/guides/dbt_advanced_configs#filter-tables), which is essentially a `where` clause that is configured in that model's yml. This defines which rows will be diffed.
