@@ -175,6 +175,16 @@ Run your dbt model with `data-diff --dbt` to see the impact that your model chan
 
 ### Optional configurations and flags
 
+#### Running `data-diff` on specific dbt models
+
+Out of the box, `data-diff --dbt` will diff all models that were built in your last `dbt run`.
+
+To override that, beginning with `data-diff` version 1.5, you can add a `--select` flag to specify which models you want to diff.
+
+```
+data-diff --dbt --select <models>
+```
+
 #### Handling very large dbt models
 
 `data-diff` will reach performance limitations on large dbt models that have many changes. One strategy to reduce run time is the addition of a [filter](/guides/dbt_advanced_configs#filter-tables), which is essentially a `where` clause that is configured in that model's yml.
