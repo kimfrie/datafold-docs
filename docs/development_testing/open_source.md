@@ -173,6 +173,10 @@ Run your dbt model with `data-diff --dbt` to see the impact that your model chan
   data-diff --dbt
   ```
 
-### Optional model configuration
+### Optional configurations and flags
 
-- Increase large table + diff performance by adding a [filter](/guides/dbt_advanced_configs#filter-tables)
+#### Handling very large dbt models
+
+`data-diff` will reach performance limitations on large dbt models that have many changes. One strategy to reduce run time is the addition of a [filter](/guides/dbt_advanced_configs#filter-tables), which is essentially a `where` clause that is configured in that model's yml.
+
+With [our free Community Cloud tool](./cloud.md), you can implement a sampling strategy to diff a representative subset of the rows, to achieve a balance of speed and rigor.
