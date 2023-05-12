@@ -1,7 +1,7 @@
 ---
 sidebar_position: 1
 id: open_source
-title: data-diff
+title: 'Development Testing: Open Source'
 sidebar_label: Open Source
 hide_table_of_contents: true
 ---
@@ -13,8 +13,8 @@ import TabItem from '@theme/TabItem';
 
 ### See how every change to dbt code affects the data produced in the modified model and downstream.
 
-:::tip Datafold in CI
-🔧 Interested in adding Datafold to your CI pipeline? [Let's talk!](https://calendly.com/d/zkz-63b-23q/see-a-demo?email=clay%20analytics%40datafold.com&first_name=Clay&last_name=Moeller&a1=) ☎️
+:::tip Team Cloud
+🔧 Interested in adding Datafold Team Cloud to your CI pipeline? [Let's talk!](https://calendly.com/d/zkz-63b-23q/see-a-demo?email=clay%20analytics%40datafold.com&first_name=Clay&last_name=Moeller&a1=) ☎️
 :::
 
 
@@ -33,18 +33,11 @@ Navigate to your dbt project, and install data-diff.
 pip install data-diff
 ```
 
-<details>
-  <summary>Additional BigQuery details</summary>
-  Only dbt projects that use the <a href="https://docs.getdbt.com/reference/warehouse-setups/bigquery-setup#oauth-via-gcloud">OAuth via gcloud</a> connection method are currently supported.
-  <br/> <br/>
-  For example, run: <br/> <code>gcloud auth application-default login</code> <br/>
-  <br/>
-  Before running: <br/> <code>dbt run --select &lt;MODEL&gt; && data-diff --dbt</code> <br/>
-</details>
-  
-### Configure your dbt Project
+
+### Configure your dbt project
+
 :::info
-These docs reflect the latest version of data-diff listed [here](https://github.com/datafold/data-diff/releases)!
+These docs reflect the latest version of data-diff listed [here](https://github.com/datafold/data-diff/releases).
 
 Run `pip install data-diff -U` to update!
 :::
@@ -124,6 +117,18 @@ Run your dbt model with `data-diff --dbt` to see the impact that your model chan
   data-diff --dbt
   ```
 
-### Optional model configuration
+### Optional configurations and flags
 
-- Increase large table + diff performance by adding a [filter](/guides/dbt_advanced_configs#filter-tables)
+#### Running `data-diff` on specific dbt models
+
+Out of the box, `data-diff --dbt` will diff all models that were built in your last `dbt run`.
+
+Beginning with `data-diff` version 1.5, you can add a `--select` flag to override the default behavior and specify which models you want to diff.
+
+```
+data-diff --dbt --select <models>
+```
+
+#### Handling very large dbt models
+
+`data-diff` will reach performance limitations on large dbt models. One strategy to reduce run time in this scenario is to add a [filter](/guides/dbt_advanced_configs#filter-tables), which is essentially a `where` clause that is configured in that model's yml. This defines which rows will be diffed.

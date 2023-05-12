@@ -1,10 +1,16 @@
 ---
 id: getting_started
-title: Getting Started
+title: Develop faster without breaking data
 slug: /
+hide_table_of_contents: true
 ---
 import Tabs from '@theme/Tabs';
 import TabItem from '@theme/TabItem';
+
+## Automated testing for data engineers
+
+### Don’t wait for stakeholders, monitoring tools, and customers to tell you about broken data.
+### Adopt a workflow that makes data quality issues a thing of the past.
 
 <Tabs>
   <TabItem value="diff_ui" label="Development Testing" >
