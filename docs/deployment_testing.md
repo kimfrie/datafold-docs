@@ -13,8 +13,11 @@ hide_table_of_contents: true
 :::tip Team Cloud
 🔧 Interested in adding Datafold Team Cloud to your CI pipeline? [Let's talk!](https://calendly.com/d/zkz-63b-23q/see-a-demo?email=clay%20analytics%40datafold.com&first_name=Clay&last_name=Moeller&a1=) ☎️
 :::
-
-
+<br />
+<div align="center">
+    <iframe width="640" height="414" src="https://www.loom.com/embed/182d0889db6a4e75a9acb7e62e6d0b62" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
+</div>
+<br />
 <table>
     <tr>
         <td width="50%">
