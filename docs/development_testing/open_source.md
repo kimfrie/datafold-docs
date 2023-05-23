@@ -17,7 +17,20 @@ import TabItem from '@theme/TabItem';
 🔧 Interested in adding Datafold Team Cloud to your CI pipeline? [Let's talk!](https://calendly.com/d/zkz-63b-23q/see-a-demo?email=clay%20analytics%40datafold.com&first_name=Clay&last_name=Moeller&a1=) ☎️
 :::
 
-
+<br />
+<div align="center">
+    <iframe
+      width="640"
+      height="414"
+      src="https://www.loom.com/embed/ad3df969ba6b4298939efb2fbcc14cde"
+      frameborder="0"
+      webkitallowfullscreen
+      mozallowfullscreen
+      allowfullscreen
+      >
+    </iframe>
+</div>
+<br />
 
 ## What is data-diff?
 
