@@ -55,14 +55,14 @@ Navigate to your dbt project, and install data-diff and a database connector.
   <TabItem value="snowflake">
 
   ```zsh
-  pip install data-diff 'data-diff[snowflake,dbt]' -U
+  pip install data-diff 'data-diff[snowflake]' -U
   ```
 
   </TabItem>
   <TabItem value="bigquery">
 
   ```zsh
-pip install data-diff 'data-diff[dbt]' google-cloud-bigquery -U
+pip install data-diff google-cloud-bigquery -U
   ```
   <details>
     <summary>Additional BigQuery details</summary>
@@ -77,28 +77,28 @@ pip install data-diff 'data-diff[dbt]' google-cloud-bigquery -U
   <TabItem value="redshift">
 
   ```zsh
-  pip install data-diff 'data-diff[redshift,dbt]' -U
+  pip install data-diff 'data-diff[redshift]' -U
   ```
 
   </TabItem>
   <TabItem value="postgres">
 
   ```zsh
-  pip install data-diff 'data-diff[postgres,dbt]' -U
+  pip install data-diff 'data-diff[postgres]' -U
   ```
 
   </TabItem>
   <TabItem value="databricks">
 
   ```zsh
-  pip install data-diff 'data-diff[databricks,dbt]' -U
+  pip install data-diff 'data-diff[databricks]' -U
   ```
 
   </TabItem>
   <TabItem value="duckdb">
 
   ```zsh
-  pip install data-diff 'data-diff[duckdb,dbt]' -U
+  pip install data-diff 'data-diff[duckdb]' -U
   ```
 
   </TabItem>
