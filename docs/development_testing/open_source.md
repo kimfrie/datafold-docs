@@ -117,7 +117,7 @@ Add the following variables to **dbt_project.yml**:
   #dbt_project.yml
   vars:
     data_diff:
-      prod_database: my_database # default database for the prod target
+      prod_database: my_default_database # default database for the prod target
       prod_schema: my_default_schema # default schema for the prod target
       prod_custom_schema: PROD_<custom_schema> # Optional: see dropdown below
   ```
