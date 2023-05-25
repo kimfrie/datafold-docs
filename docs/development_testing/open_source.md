@@ -192,7 +192,7 @@ Run your dbt model with `data-diff --dbt` to see the impact that your model chan
 
 Out of the box, `data-diff --dbt` will diff all models that were built in your last `dbt run`.
 
-Beginning with `data-diff` version 1.5, you can add a `--select` flag to override the default behavior and specify which models you want to diff.
+Beginning with `data-diff` version 0.7.5, you can add a `--select` flag to override the default behavior and specify which models you want to diff.
 
 ```
 data-diff --dbt --select <models>
