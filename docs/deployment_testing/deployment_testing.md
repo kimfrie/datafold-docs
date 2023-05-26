@@ -2,7 +2,7 @@
 id: deployment_testing
 title: Deployment Testing
 sidebar_label: Team Cloud
-pagination_next: deployment_testing/getting_started_for_customers
+pagination_next: deployment_testing/team_cloud/getting_started_for_customers
 hide_table_of_contents: true
 ---
 

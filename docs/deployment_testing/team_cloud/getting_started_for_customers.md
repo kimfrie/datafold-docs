@@ -2,7 +2,7 @@
 id: getting_started_for_customers
 title: Getting Started with Deployment Testing
 sidebar_label: Getting Started
-pagination_next: deployment_testing/getting_started_for_customers/data_sources
+pagination_next: deployment_testing/team_cloud/getting_started_for_customers/data_sources
 hide_table_of_contents: true
 ---
 
@@ -13,7 +13,7 @@ hide_table_of_contents: true
 
 ## Getting Started with Deployment Testing
 
-1. Connect your [Data Source](/deployment_testing/getting_started_for_customers/data_sources)
-2. Integrate with [Source Control](/deployment_testing/getting_started_for_customers/source_control)
-3. Integrate with [dbt Core/Cloud](/deployment_testing/getting_started_for_customers/dbt)
-4. [Optional] Connect [Data Apps](/deployment_testing/getting_started_for_customers/data_apps)
+1. Connect your [Data Source](/deployment_testing/team_cloud/getting_started_for_customers/data_sources)
+2. Integrate with [Source Control](/deployment_testing/team_cloud/getting_started_for_customers/source_control)
+3. Integrate with [dbt Core/Cloud](/deployment_testing/team_cloud/getting_started_for_customers/dbt)
+4. [Optional] Connect [Data Apps](/deployment_testing/team_cloud/getting_started_for_customers/data_apps)
