@@ -2,7 +2,7 @@
 sidebar_position: 1
 title: Snowflake
 description: ""
-pagination_prev: deployment_testing/data_sources
+pagination_prev: deployment_testing/getting_started_for_customers/data_sources
 pagination_next: deployment_testing/source_control
 ---
 **NOTE**: Datafold needs permissions in your Snowflake dataset to read your table data. You will need to be a Snowflake *Admin* in order to grant the required permissions.

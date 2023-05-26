@@ -2,7 +2,7 @@
 sidebar_position: 5
 title: Postgres
 description: ""
-pagination_prev: deployment_testing/data_sources
+pagination_prev: deployment_testing/getting_started_for_customers/data_sources
 pagination_next: deployment_testing/source_control
 ---
 **Caution** - Column-level Lineage is supported for AWS Aurora and RDS Postgres and *requires* Cloudwatch to be configured.

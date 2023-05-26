@@ -6,7 +6,7 @@ pagination_next: deployment_testing/data_apps
 # Integrate with dbt Core/Cloud
 
 :::note
-To integrate with dbt, first connect a [Data Source](../deployment_testing/data_sources.md) and integrate with [Source Control](../deployment_testing/source_control.md).
+To integrate with dbt, first connect a [Data Source](..//deployment_testing/getting_started_for_customers/data_sources.md) and integrate with [Source Control](../deployment_testing/source_control.md).
 
 Then navigate to **Settings** &rarr; **dbt** and click **Add New Integration**.
 :::
