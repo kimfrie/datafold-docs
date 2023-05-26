@@ -29,6 +29,7 @@ const sidebars = {
       link: {type: 'doc', id: 'deployment_testing'},
       items: [
         'deployment_testing',
+        'deployment_testing/getting_started_for_customers',
         {
           type: 'category',
           label: 'Data Source',
