@@ -1,6 +1,6 @@
 ---
 pagination_prev: deployment_testing/getting_started_for_customers/data_sources
-pagination_next: deployment_testing/dbt
+pagination_next: deployment_testing/getting_started_for_customers/dbt
 ---
 
 # Integrate with Source Control

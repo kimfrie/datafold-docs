@@ -179,14 +179,14 @@ const config = {
               from: '/integrations/git/gitlab',
             },
             {
-              to: '/deployment_testing/dbt/dbt_cloud',
+              to: '/deployment_testing/getting_started_for_customers/dbt/dbt_cloud',
               from: [
                 '/integrations/orchestration/dbt_cloud/prerequisites', 
                 '/integrations/orchestration/dbt_cloud/configuration'
               ],
             },
             {
-              to: '/deployment_testing/dbt/dbt_core',
+              to: '/deployment_testing/getting_started_for_customers/dbt/dbt_core',
               from: [
                 '/integrations/orchestration/dbt_core/prerequisites', 
                 '/integrations/orchestration/dbt_core/connection', 
@@ -209,11 +209,11 @@ const config = {
               ],
             },
             {
-              to: '/deployment_testing/data_apps/hightouch',
+              to: '/deployment_testing/getting_started_for_customers/data_apps/hightouch',
               from: '/integrations/data_apps/hightouch',
             },
             {
-              to: '/deployment_testing/data_apps/mode',
+              to: '/deployment_testing/getting_started_for_customers/data_apps/mode',
               from: '/integrations/data_apps/mode',
             },
             {

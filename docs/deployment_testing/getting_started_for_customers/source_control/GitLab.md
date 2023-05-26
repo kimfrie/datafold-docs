@@ -3,7 +3,7 @@ sidebar_position: 2
 title: GitLab
 description: ""
 pagination_prev: deployment_testing/getting_started_for_customers/source_control
-pagination_next: deployment_testing/dbt
+pagination_next: deployment_testing/getting_started_for_customers/dbt
 ---
 
 To get the [project access token](https://docs.gitlab.com/ee/user/project/settings/project\_access\_tokens.html), navigate to your GitLab project settings and create a new token. *Note*: Project access tokens are preferred over personal tokens for security.
