@@ -1,7 +1,7 @@
 ---
 id: getting_started_for_customers
 title: Getting Started with Deployment Testing
-sidebar_label: Getting Started for Customers
+sidebar_label: Getting Started
 pagination_next: deployment_testing/data_sources
 hide_table_of_contents: true
 ---
