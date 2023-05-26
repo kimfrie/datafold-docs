@@ -1,8 +1,8 @@
 ---
 sidebar_position: 2
 id: cloud
-title: 'Development Testing: Community Cloud'
-sidebar_label: Community Cloud
+title: 'Development Testing: Team Cloud'
+sidebar_label: Team Cloud
 hide_table_of_contents: true
 ---
 import Tabs from '@theme/Tabs';
@@ -10,7 +10,7 @@ import TabItem from '@theme/TabItem';
 
 ## See value-level impact as you develop in dbt.
 
-### Create a free Datafold Cloud account to view and save value-level impact reports generated while developing in your dbt local environment.
+### Create a Team Cloud account to view and save value-level impact reports generated while developing in your dbt local environment.
 
 :::tip Team Cloud
 🔧 Interested in adding Datafold Team Cloud to your CI pipeline? [Let's talk!](https://calendly.com/d/zkz-63b-23q/see-a-demo?email=clay%20analytics%40datafold.com&first_name=Clay&last_name=Moeller&a1=) ☎️
@@ -20,13 +20,13 @@ import TabItem from '@theme/TabItem';
 
 Install Datafold's open source data-diff tool and update a few lines in your **dbt_project.yml** by [following these installation instructions](/development_testing/open_source).
 
-### Create a Datafold account
+### Create a Team Cloud account
 
-If you don't already have a Datafold account, you can create one [here](https://app.datafold.com/org-signup).
+If you don't already have a Team Cloud account, [reach out to our team](https://calendly.com/d/zkz-63b-23q/see-a-demo?email=clay%20analytics%40datafold.com&first_name=Clay&last_name=Moeller&a1=) to get started.
 
 ### Configure a data source
 
-To configure a Data Source, navigate to **Settings** &rarr; **Integrations** &rarr; **Data warehouses** and click **Add new integration** and follow the prompts. For more information, check out our [Data Source configuration guides](/deployment_testing/data_sources).
+To connect to your data warehouse, navigate to **Settings** &rarr; **Integrations** &rarr; **Data warehouses** and click **Add new integration** and follow the prompts. For more information, check out our [Data Source configuration guides](/deployment_testing/data_sources).
 
 After you **Test and Save**, add the Data Source ID (which can be found on the Data warehouses page) to your **dbt_project.yml**.
     
