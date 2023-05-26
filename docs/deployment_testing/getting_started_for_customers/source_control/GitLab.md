@@ -2,7 +2,7 @@
 sidebar_position: 2
 title: GitLab
 description: ""
-pagination_prev: deployment_testing/source_control
+pagination_prev: deployment_testing/getting_started_for_customers/source_control
 pagination_next: deployment_testing/dbt
 ---
 

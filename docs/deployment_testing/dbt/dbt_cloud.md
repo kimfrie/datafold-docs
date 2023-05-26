@@ -2,7 +2,7 @@
 sidebar_position: 2
 title: dbt Cloud
 description: ""
-pagination_prev: deployment_testing/source_control
+pagination_prev: deployment_testing/getting_started_for_customers/source_control
 pagination_next: deployment_testing/data_apps
 ---
 :::info

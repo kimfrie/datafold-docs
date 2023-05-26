@@ -171,11 +171,11 @@ const config = {
               ],
             },
             {
-              to: '/deployment_testing/source_control/GitHub',
+              to: '/deployment_testing/getting_started_for_customers/source_control/GitHub',
               from: '/integrations/git/github',
             },
             {
-              to: '/deployment_testing/source_control/GitLab',
+              to: '/deployment_testing/getting_started_for_customers/source_control/GitLab',
               from: '/integrations/git/gitlab',
             },
             {

@@ -3,7 +3,7 @@ sidebar_position: 2
 title: BigQuery
 description: ""
 pagination_prev: deployment_testing/getting_started_for_customers/data_sources
-pagination_next: deployment_testing/source_control
+pagination_next: deployment_testing/getting_started_for_customers/source_control
 ---
 **Steps to complete:**
 
